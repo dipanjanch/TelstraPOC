@@ -18,12 +18,19 @@ public class ServicesPage extends BasePage{
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(new AppiumFieldDecorator(driver), servicepage);
 	}
+	
+	/**
+	 * Scroll to Internet of things
+	 */
 	public void scrolltoInternetofThings()
 	{
 		LogClass.info("Scroll to Internet of Things ");
 		keys.scrollToText("Internet of Things");
 	}
 	
+	/**
+	 * Validate Internet of things as last card
+	 */
 	public void validateInternetofThingsAsLastCard()
 	{
 		String lastCardName = keys.getElementText(servicepage.lastCardNameInServices, "text");

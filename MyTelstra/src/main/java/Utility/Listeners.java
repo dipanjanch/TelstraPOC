@@ -29,7 +29,7 @@ public class Listeners extends BasePage implements ITestListener {
 	 */
 	public void onTestStart(ITestResult result) {
 		LogClass.info("Test case" + result.getName() + " started");
-		
+
 	}
 
 	/**

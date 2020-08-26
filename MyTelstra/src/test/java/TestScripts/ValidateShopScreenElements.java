@@ -12,23 +12,23 @@ import PageObjects.ShopPage;
 import io.appium.java_client.AppiumDriver;
 
 public class ValidateShopScreenElements extends BasePage {
+
 	@Test
 	public void ValidateShopScreenElementsTC() throws InterruptedException, IOException {
-	startReporting(new Object() {
-	}.getClass().getEnclosingMethod().getName());
-	LoginPage loginPage = new LoginPage((AppiumDriver) driver);
-	HomePage homePage = new HomePage((AppiumDriver) driver);
-	ShopPage shopPage = new ShopPage((AppiumDriver) driver);
-	
-	loginPage.changeEnvironment();
-	loginPage.launchMyTelstraApp();
-	loginPage.loginMyTelstra();
-	homePage.clickShopTab();
-	shopPage.vaidateWelcomeToShop();
-	shopPage.scrolltoGetMoreFromTelstra();
-	shopPage.validateGetMoreFromTelstra();
-	shopPage.validateShopByBrandsTile();
-	
+		startReporting(new Object() {
+		}.getClass().getEnclosingMethod().getName());
+		LoginPage loginPage = new LoginPage((AppiumDriver) driver);
+		HomePage homePage = new HomePage((AppiumDriver) driver);
+		ShopPage shopPage = new ShopPage((AppiumDriver) driver);
+
+		loginPage.changeEnvironment("PVT");
+		loginPage.loginMyTelstra();
+		homePage.clickShopTab();
+		shopPage.vaidateWelcomeToShop();
+		shopPage.scrolltoGetMoreFromTelstra();
+		shopPage.validateGetMoreFromTelstra();
+		shopPage.validateShopByBrandsTile();
+
 	}
 
 }
