@@ -1,0 +1,7 @@
+2020-08-25 16:55:00,368 INFO  [BasePage] class TestScripts.ValidateInternetOfThings 
+2020-08-25 16:55:05,828 INFO  [BasePage] Androiddriver created successfully 
+2020-08-25 16:55:05,828 INFO  [BasePage] Application launched successfully 
+2020-08-25 16:55:06,023 INFO  [LoginPage] class PageObjects.LoginPage 
+2020-08-25 16:55:06,024 INFO  [LoginPage] Loginpage elements initialized 
+2020-08-25 16:55:39,773 INFO  [LoginPage] class PageObjects.LoginPage 
+2020-08-25 16:56:54,366 INFO  [BasePage] Quitting the driver 

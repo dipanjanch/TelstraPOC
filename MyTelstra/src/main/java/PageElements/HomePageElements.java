@@ -15,7 +15,7 @@ public class HomePageElements {
 	public WebElement home_button;
 
 	@CacheLookup
-	@AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc='Services tab 2 of 5']/android.view.ViewGroup/android.widget.TextView")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Services']")
 	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
 	public WebElement services_button;
 
@@ -30,13 +30,8 @@ public class HomePageElements {
 	public WebElement gethelp_button;
 
 	@CacheLookup
-	@AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc='Shop tab 5 of 5']/android.widget.ImageView")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Shop']")
 	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
 	public WebElement shop_button;
-
-	@CacheLookup
-	@AndroidFindBy(xpath = "((//android.widget.LinearLayout[@resource-id='com.telstra.mobile.android.mytelstra.dev.debug:id/cardSectionLayout'])[last()]/android.widget.Button/android.widget.TextView)[1]")
-	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
-	public WebElement lastCardNameInServices;
 
 }

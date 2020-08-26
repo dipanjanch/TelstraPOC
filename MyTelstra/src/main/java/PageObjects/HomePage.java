@@ -13,8 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import General.BasePage;
-import General.KeywordFunctions;
+import General.KeyFunctions;
 import PageElements.HomePageElements;
+import Utility.LogClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -25,7 +26,7 @@ import io.appium.java_client.pagefactory.WithTimeout;
 public class HomePage extends BasePage{
 	protected Logger log = Logger.getLogger(HomePage.class.getName());// + ":" + nameofCurrMethod);
 	public HomePageElements homepage = new HomePageElements();
-	protected KeywordFunctions keys = new KeywordFunctions(driver);
+	protected KeyFunctions keys = new KeyFunctions(driver);
 
 	public Properties obj;
 	public FileInputStream objfile;
@@ -38,24 +39,15 @@ public class HomePage extends BasePage{
 	}
 
 	public void clickServicesTab() {	
-		System.out.println("Click on services_button ");
-		System.out.println();
+		LogClass.info("Click on services_button ");
 		keys.clickElement(homepage.services_button);
 	}
 	
-	public void scrolltoInternetofThings()
-	{
-		System.out.println("Scroll to Internet of Things ");
-		keys.scrollToText("Internet of Things");
+	public void clickShopTab() {	
+		LogClass.info("Click on shop_button ");
+		keys.clickElement(homepage.shop_button);
 	}
 	
-	public void validateInternetofThingsAsLastCard()
-	{
-		String lastCardName = keys.getElementText(homepage.lastCardNameInServices, "text");
-		System.out.println("Name dispayed in lasd card="+lastCardName);
-		System.out.println("Validating the last card name");
-		Boolean isNameDisplayed = lastCardName.equalsIgnoreCase("Internet of Things");
-		Assert.assertTrue(isNameDisplayed, "Validating the last card as Internet of Things");
-	}
+	
 
 }

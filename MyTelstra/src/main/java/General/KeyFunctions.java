@@ -1,14 +1,27 @@
 package General;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+
+import Utility.LogClass;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -18,11 +31,39 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class KeywordFunctions extends BasePage{
-	public KeywordFunctions(WebDriver driver) {
+public class KeyFunctions extends BasePage{
+	public KeyFunctions(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		driver = BasePage.driver;
 	}
+	
+	/**
+	 * This method gets the current time
+	 * 
+	 * @return String containing the current time
+	 */
+	public static String getCurrentDateAndTime() {
+		DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
+		Date currentDate = new Date();
+		return customFormat.format(currentDate);
+	}
+	
+	/**
+	 * This method is used to get a base64 screenshot and attach it to the extent
+	 * report
+	 * 
+	 * @throws IOException
+	 */
+	public static void attachScreenshotToReport() throws IOException {
+		String path = System.getProperty("user.dir") + "/Screenshots/" + getCurrentDateAndTime() + ".png";
+		File scrfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrfile, new File(path));
+		screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+		reporter.log(Status.INFO, "Snapshot below: ",
+				MediaEntityBuilder.createScreenCaptureFromBase64String(screenshot).build());
+
+	}
+	
 	//clicking element
 	public void clickElement(WebElement element) {
 
@@ -58,16 +99,16 @@ public class KeywordFunctions extends BasePage{
 	public void tryVscrolltoElement(String xpath, double startwidthx, double startheighty, double endheighty) {
 		TouchAction actions;
 		Dimension dimensions = driver.manage().window().getSize();
-		System.out.println("s=" + dimensions);
+		LogClass.info("s=" + dimensions);
 		Double screenWidthStart = dimensions.getWidth() * startwidthx;
 		int scrollStartx = screenWidthStart.intValue();
-		System.out.println("startx=" + scrollStartx);
+		LogClass.info("startx=" + scrollStartx);
 		Double screenHeightStart = dimensions.getHeight() * startheighty;
 		int scrollStarty = screenHeightStart.intValue();
-		System.out.println("starty=" + scrollStarty);
+		LogClass.info("starty=" + scrollStarty);
 		Double screenHeightEnd = dimensions.getHeight() * endheighty;
 		int scrollEndy = screenHeightEnd.intValue();
-		System.out.println("endy=" + scrollEndy);
+		LogClass.info("endy=" + scrollEndy);
 		actions = new TouchAction(driver);
 		boolean display;
 		By element=By.xpath(xpath);
@@ -92,6 +133,16 @@ public class KeywordFunctions extends BasePage{
 
 		((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
 
+	}
+	
+	/**
+	 * Method to check element displayed
+	 * 
+	 * @param element : WebElement element to pass the locator
+	 */
+	public boolean isElementDisplayed(WebElement element) {
+		waitForElementPresent(element);
+		return element.isDisplayed();
 	}
 	/**
 	 * Method to check element presence using explicit wait condition
