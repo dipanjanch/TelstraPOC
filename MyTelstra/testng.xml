@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTelstraSuite" parallel="false" preserve-order="true">
+	<test name="Test1">
+	    <parameter name="deviceName_" value="emulator" /> 
+	    <parameter name="UDID" value="emulator-5554" /> 
+		<parameter name="platformName_" value="Android" />
+		<parameter name="appPackage_" value="com.telstra.mobile.android.mytelstra.dev.debug" />
+		<parameter name="appActivity_" value="com.telstra.mobile.android.mytelstra.activities.SplashActivity" />		
+		<classes>
+			<class name="TestScripts.ValidateInternetOfThings" />
+		</classes>
+	</test>
+</suite>
