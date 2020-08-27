@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-26T09:00:54Z" name="MyTelstraSuite" finished-at="2020-08-26T09:02:01Z" duration-ms="67648">
+  <suite started-at="2020-08-26T12:37:40Z" name="MyTelstraSuite" finished-at="2020-08-26T12:39:30Z" duration-ms="110374">
     <groups>
     </groups>
-    <test started-at="2020-08-26T09:00:54Z" name="Test1" finished-at="2020-08-26T09:02:01Z" duration-ms="67648">
+    <test started-at="2020-08-26T12:37:40Z" name="Test1" finished-at="2020-08-26T12:39:30Z" duration-ms="110374">
       <class name="TestScripts.ValidateShopScreenElements">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T09:00:53Z" name="initialization" finished-at="2020-08-26T09:00:54Z" duration-ms="264" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T12:37:39Z" name="initialization" finished-at="2020-08-26T12:37:40Z" duration-ms="367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="driversetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T09:00:54Z" name="driversetUp" finished-at="2020-08-26T09:00:59Z" duration-ms="5137" status="PASS">
+        <test-method is-config="true" signature="driversetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T12:37:40Z" name="driversetUp" finished-at="2020-08-26T12:37:45Z" duration-ms="4928" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,77 +42,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driversetUp -->
-        <test-method signature="ValidateShopScreenElementsTC()[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T09:00:59Z" name="ValidateShopScreenElementsTC" finished-at="2020-08-26T09:01:55Z" duration-ms="56050" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.id: com.google.android.googlequicksearchbox:id/search_box})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: com.google.android.googlequicksearchbox:id/search_box})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.setValue(<generated>)
-at General.KeyFunctions.sendSetText(KeyFunctions.java:76)
-at PageObjects.LoginPage.launchMyTelstraApp(LoginPage.java:60)
-at TestScripts.ValidateShopScreenElements.ValidateShopScreenElementsTC(ValidateShopScreenElements.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2e23c180 (tried for 25 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 30 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.google.android.googlequicksearchbox:id/search_box})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'C02YQGKGLVCF', ip: '2405:201:ae00:5734:a551:6a51:e0c6:1df6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '12.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="ValidateShopScreenElementsTC()[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T12:37:45Z" name="ValidateShopScreenElementsTC" finished-at="2020-08-26T12:39:24Z" duration-ms="98976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateShopScreenElementsTC -->
-        <test-method is-config="true" signature="driverTearDown()[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T09:02:01Z" name="driverTearDown" finished-at="2020-08-26T09:02:01Z" duration-ms="473" status="PASS">
+        <test-method is-config="true" signature="driverTearDown()[pri:0, instance:TestScripts.ValidateShopScreenElements@7674f035]" started-at="2020-08-26T12:39:29Z" name="driverTearDown" finished-at="2020-08-26T12:39:30Z" duration-ms="881" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverTearDown -->
