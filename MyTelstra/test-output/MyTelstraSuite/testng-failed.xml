@@ -16,7 +16,7 @@
           <include name="initialization"/>
           <include name="driversetUp"/>
           <include name="driverTearDown"/>
-          <include name="ValidateInternetOfThingsTC"/>
+          <include name="ValidateProfilePageElementsTC"/>
         </methods>
       </class> <!-- TestScripts.ValidateProfilePageElements -->
     </classes>
