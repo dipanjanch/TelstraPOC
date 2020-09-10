@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-08T11:27:40Z" name="MyTelstraSuite" finished-at="2020-09-08T11:30:11Z" duration-ms="150987">
+  <suite started-at="2020-09-10T10:00:42Z" name="MyTelstraSuite" finished-at="2020-09-10T10:02:50Z" duration-ms="128886">
     <groups>
     </groups>
-    <test started-at="2020-09-08T11:27:40Z" name="Test1" finished-at="2020-09-08T11:30:11Z" duration-ms="150987">
+    <test started-at="2020-09-10T10:00:42Z" name="Test1" finished-at="2020-09-10T10:02:50Z" duration-ms="128886">
       <class name="TestScripts.ValidateProfilePageElements">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-08T11:27:40Z" name="initialization" finished-at="2020-09-08T11:27:40Z" duration-ms="296" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-10T10:00:41Z" name="initialization" finished-at="2020-09-10T10:00:42Z" duration-ms="344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="driversetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-08T11:27:40Z" name="driversetUp" finished-at="2020-09-08T11:27:47Z" duration-ms="6179" status="PASS">
+        <test-method is-config="true" signature="driversetUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-10T10:00:42Z" name="driversetUp" finished-at="2020-09-10T10:00:48Z" duration-ms="5929" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,11 +42,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driversetUp -->
-        <test-method signature="ValidateInternetOfThingsTC()[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-08T11:27:47Z" name="ValidateInternetOfThingsTC" finished-at="2020-09-08T11:30:04Z" duration-ms="137597" status="PASS">
+        <test-method signature="ValidateProfilePageElementsTC()[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-10T10:00:48Z" name="ValidateProfilePageElementsTC" finished-at="2020-09-10T10:02:43Z" duration-ms="115344" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateInternetOfThingsTC -->
-        <test-method is-config="true" signature="driverTearDown()[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-08T11:30:11Z" name="driverTearDown" finished-at="2020-09-08T11:30:11Z" duration-ms="780" status="PASS">
+        </test-method> <!-- ValidateProfilePageElementsTC -->
+        <test-method is-config="true" signature="driverTearDown()[pri:0, instance:TestScripts.ValidateProfilePageElements@7674f035]" started-at="2020-09-10T10:02:49Z" name="driverTearDown" finished-at="2020-09-10T10:02:50Z" duration-ms="972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverTearDown -->

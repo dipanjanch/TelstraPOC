@@ -111,8 +111,8 @@ public class KeyFunctions extends BasePage {
 	 * @param param
 	 * @return
 	 */
-	public String getElementText(WebElement ele, String param) {
-		String eletext = ele.getAttribute(param);
+	public String getElementText(WebElement ele) {
+		String eletext = ele.getText();
 
 		return eletext;
 	}
