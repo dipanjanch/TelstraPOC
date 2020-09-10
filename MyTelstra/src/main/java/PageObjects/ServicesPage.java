@@ -33,7 +33,7 @@ public class ServicesPage extends BasePage{
 	 */
 	public void validateInternetofThingsAsLastCard()
 	{
-		String lastCardName = keys.getElementText(servicepage.lastCardNameInServices, "text");
+		String lastCardName = keys.getElementText(servicepage.lastCardNameInServices);
 		LogClass.info("Name dispayed in lasd card="+lastCardName);
 		LogClass.info("Validating the last card name");
 		Boolean isNameDisplayed = lastCardName.equalsIgnoreCase("Internet of Things");
