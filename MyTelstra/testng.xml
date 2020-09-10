@@ -12,7 +12,8 @@
 		<parameter name="appActivity_" value="com.telstra.mobile.android.mytelstra.activities.SplashActivity" />		
 		<classes>
 			<!-- <class name="TestScripts.ValidateInternetOfThings" />  -->
-			<class name="TestScripts.ValidateShopScreenElements" />
+			<!-- <class name="TestScripts.ValidateShopScreenElements" /> -->
+			<class name="TestScripts.ValidateProfilePageElements" /> 
 		</classes>
 	</test>
 </suite>

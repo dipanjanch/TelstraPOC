@@ -33,5 +33,10 @@ public class HomePageElements {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Shop']")
 	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
 	public WebElement shop_button;
+	
+	@CacheLookup
+	@AndroidFindBy(id = "com.telstra.mobile.android.mytelstra.dev.debug:id/profile")
+	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
+	public WebElement profileIcon;
 
 }

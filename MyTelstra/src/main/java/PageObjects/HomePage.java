@@ -55,5 +55,14 @@ public class HomePage extends BasePage {
 		keys.waitForElementPresent(homepage.shop_button);
 		keys.clickElement(homepage.shop_button);
 	}
+	
+	/**
+	 * Click in Profile Tab
+	 */
+	public void clickProfileTab() {
+		LogClass.info("Click on shop_button ");
+		keys.waitForElementPresent(homepage.profileIcon);
+		keys.clickElement(homepage.profileIcon);
+	}
 
 }

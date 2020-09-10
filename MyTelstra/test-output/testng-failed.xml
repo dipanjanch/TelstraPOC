@@ -11,14 +11,14 @@
     <parameter name="deviceName_" value="emulator"/>
     <parameter name="appPackage_" value="com.telstra.mobile.android.mytelstra.dev.debug"/>
     <classes>
-      <class name="TestScripts.ValidateShopScreenElements">
+      <class name="TestScripts.ValidateProfilePageElements">
         <methods>
           <include name="initialization"/>
           <include name="driversetUp"/>
-          <include name="ValidateShopScreenElementsTC"/>
           <include name="driverTearDown"/>
+          <include name="ValidateInternetOfThingsTC"/>
         </methods>
-      </class> <!-- TestScripts.ValidateShopScreenElements -->
+      </class> <!-- TestScripts.ValidateProfilePageElements -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [MyTelstraSuite] -->
