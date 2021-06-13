@@ -8,12 +8,12 @@
 	    <parameter name="deviceName_" value="emulator" /> 
 	    <parameter name="UDID" value="emulator-5554" /> 
 		<parameter name="platformName_" value="Android" />
-		<parameter name="appPackage_" value="com.telstra.mobile.android.mytelstra.dev.debug" />
-		<parameter name="appActivity_" value="com.telstra.mobile.android.mytelstra.activities.SplashActivity" />		
+		<parameter name="appPackage_" value="com.android.calculator2" />
+		<parameter name="appActivity_" value="com.android.calculator2.Calculator" />
 		<classes>
 			<!-- <class name="TestScripts.ValidateInternetOfThings" />  -->
 			<!-- <class name="TestScripts.ValidateShopScreenElements" /> -->
-			<class name="TestScripts.ValidateProfilePageElements" /> 
+			<class name="TestScripts.calculator" />
 		</classes>
 	</test>
 </suite>

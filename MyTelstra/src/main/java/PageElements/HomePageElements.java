@@ -39,4 +39,32 @@ public class HomePageElements {
 	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
 	public WebElement profileIcon;
 
+	/**
+	 * Elements to test the calculator application
+	 */
+	@CacheLookup
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='8']")
+	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
+	public WebElement digit1;
+
+	@CacheLookup
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='2']")
+	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
+	public WebElement digit2;
+
+	@CacheLookup
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='÷']")
+	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
+	public WebElement operator;
+
+	@CacheLookup
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='=']")
+	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
+	public WebElement equals;
+
+	@CacheLookup
+	@AndroidFindBy(id = "com.android.calculator2:id/result")
+	@WithTimeout(time = 25, chronoUnit = ChronoUnit.SECONDS)
+	public WebElement result;
+
 }

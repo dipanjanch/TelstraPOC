@@ -65,4 +65,18 @@ public class HomePage extends BasePage {
 		keys.clickElement(homepage.profileIcon);
 	}
 
+	/**
+	 * Perform calculator app operation
+	 */
+	public void calcOperation(){
+		LogClass.info("Perform the calc operation");
+		keys.waitForElementPresent(homepage.digit1);
+		keys.clickElement(homepage.digit1);
+		keys.clickElement(homepage.operator);
+		keys.clickElement(homepage.digit2);
+		keys.clickElement(homepage.equals);
+		String result = keys.getElementText(homepage.result);
+		LogClass.info("Result = "+result);
+	}
+
 }
